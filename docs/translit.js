@@ -76,8 +76,7 @@ function translit(text) {
         }
 
         result = result.replace(/[ьЬ’']/g, "");
-        if (isServiceWord) result = result.toLowerCase();
-
+       
         return result;
     });
 }
@@ -117,6 +116,7 @@ accordionBtn.addEventListener('click', () => {
     accordionContent.style.display = open ? 'none' : 'block';
     accordionBtn.classList.toggle('active', !open);
 });
+
 
 
 
