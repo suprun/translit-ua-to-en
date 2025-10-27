@@ -95,7 +95,7 @@ copyBtn.addEventListener('click', () => {
 
 sampleBtn.addEventListener('click', async () => {
     try {
-        const response = await fetch('samples.json');
+        const response = await fetch('https://suprun.github.io/translit-ua-to-en/samples.json');
         const data = await response.json();
         const texts = data.samples;
         const randomText = texts[Math.floor(Math.random() * texts.length)];
@@ -117,6 +117,7 @@ accordionBtn.addEventListener('click', () => {
     accordionContent.style.display = open ? 'none' : 'block';
     accordionBtn.classList.toggle('active', !open);
 });
+
 
 
 
