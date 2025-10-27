@@ -35,8 +35,6 @@ const multiLetterTranslit = new Set([
     "Shch", "shch", "Ye", "ye", "Yu", "yu", "Ya", "ya", "Yi", "yi", "Ie", "ie"
 ]);
 
-const serviceWords = new Set([]);
-
 function translit(text) {
     if (!text) return "";
 
@@ -46,7 +44,6 @@ function translit(text) {
         .replace(/ЗГ/g, "ZGH");
     return text.replace(/[А-Яа-яЁёЇїІіЄєҐґ'’\-]+/g, token => {
         const lower = token.toLowerCase();
-        const isServiceWord = serviceWords.has(lower);
         let result = "";
         const isAllUpper = token === token.toUpperCase();
 
