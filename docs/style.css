@@ -1,0 +1,263 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: #f5f7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flag {
+  height: 1.6em;
+  vertical-align: middle;
+}
+
+/* ===== MAIN PANELS ===== */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* менший горизонтальний і вертикальний проміжок */
+  width: 100%;
+  max-width: 1100px;
+  transition: all 0.3s ease;
+}
+
+.panel {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  min-height: 260px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  border-color: #007bff;
+}
+
+#output {
+  background: #f2f2f2;
+  color: #222;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 160px;
+  text-align: center;
+}
+
+button:hover {
+  background: #0056cc;
+}
+
+/* ===== ARROW BETWEEN PANELS ===== */
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 48px;
+  height: 100%;
+  position: relative;
+}
+
+.arrow svg {
+  width: 32px;
+  height: 32px;
+  stroke: #007bff;
+  position: relative;
+  top: 0;
+  transform: none;
+}
+
+
+/* ===== ACCORDION ===== */
+.accordion {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 30px;
+}
+
+.accordion-btn {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  text-align: left;
+  background: #e9f1ff;
+  color: #222;
+  border: 1px solid #cbd6f0;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.accordion-btn:hover {
+  background: #dbe7ff;
+}
+
+.triangle {
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.accordion-btn.active .triangle {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.accordion-content p {
+  margin: 8px 0;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.accordion-content th,
+.accordion-content td {
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.accordion-content th {
+  background: #f0f4ff;
+  font-weight: 600;
+}
+
+.accordion-content tr:hover {
+  background: #f7faff;
+}
+
+.accordion-content ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: left;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.icon-github {
+  vertical-align: middle;
+  margin-right: 8px;
+  height: 1em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .panel {
+    width: 100%;
+    flex: 1 1 auto; /* розтягується по ширині */
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .arrow {
+    height: auto;
+    padding: 6px 0;
+  }
+
+  .arrow svg {
+    transform: rotate(90deg);
+  }
+}

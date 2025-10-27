@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Транслітерація 🇺🇦→🇬🇧</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="https://img.icons8.com/color/48/ukraine.png" alt="UA" class="flag">
+      <span>→</span>
+      <img src="https://img.icons8.com/color/48/great-britain.png" alt="UK" class="flag">
+      Транслітерація українського тексту
+    </h1>
+  </header>
+
+  <main class="main">
+    <div class="panel input-panel">
+      <textarea id="input" placeholder="Введіть український текст..."></textarea>
+      <div class="buttons">
+        <button id="sampleBtn">Зразок тексту</button>
+        <button id="clearBtn">Очистити</button>
+      </div>
+    </div>
+
+    <div class="arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7" />
+      </svg>
+    </div>
+
+    <div class="panel output-panel">
+      <textarea id="output" readonly placeholder="Результат з'явиться тут..."></textarea>
+      <div class="buttons">
+        <button id="copyBtn">Копіювати</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="accordion">
+    <button class="accordion-btn">
+      <span class="triangle">▶</span>
+      Що таке транслітерація?
+    </button>
+    <div class="accordion-content">
+      <p><strong>Транслітерáція</strong> — це процес перетворення тексту й окремих слів, які записані однією графічною системою, засобами іншої графічної системи на основі фонетичної подібності.</p>
+      <p>У зв’язку із запровадженням визнання електронного підпису між Україною та країнами Європейського союзу виникла необхідність у транслітерації українського алфавіту латиницею для сумісності міжнародних сертифікатів.</p>
+      <p>Скориставшись таблицею нижче, можна коректно передавати українські імена, географічні назви тощо відповідно до Постанови КМУ № 55 від 27.01.2010 р. <a href="https://zakon.rada.gov.ua/laws/show/55-2010-%D0%BF#Text" target="_blank">«Про впорядкування транслітерації українського алфавіту латиницею»</a>.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Український алфавіт</th>
+              <th>Латиниця</th>
+              <th>Позиція у слові</th>
+              <th>Приклади</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Аа</td><td>Aa</td><td></td><td>Алушта – Alushta; Андрій – Andrii</td></tr>
+            <tr><td>Бб</td><td>Bb</td><td></td><td>Борщагівка – Borshchahivka; Борисенко – Borysenko</td></tr>
+            <tr><td>Вв</td><td>Vv</td><td></td><td>Вінниця – Vinnytsia; Володимир – Volodymyr</td></tr>
+            <tr><td>Гг</td><td>Hh</td><td></td><td>Гадяч – Hadiach; Богдан – Bohdan</td></tr>
+            <tr><td>Ґґ</td><td>Gg</td><td></td><td>Ґалаґан – Galagan; Ґорґани – Gorgany</td></tr>
+            <tr><td>Дд</td><td>Dd</td><td></td><td>Донецьк – Donetsk; Дмитро – Dmytro</td></tr>
+            <tr><td>Ее</td><td>Ee</td><td></td><td>Рівне – Rivne; Олег – Oleh</td></tr>
+            <tr><td>Єє</td><td>Ye / ie</td><td>на початку / в середині</td><td>Єнакієве – Yenakiieve; Короп’є – Koropie</td></tr>
+            <tr><td>Жж</td><td>Zh zh</td><td></td><td>Житомир – Zhytomyr; Жанна – Zhanna</td></tr>
+            <tr><td>Зз</td><td>Zz</td><td></td><td>Закарпаття – Zakarpattia</td></tr>
+            <tr><td>Ии</td><td>Yy</td><td></td><td>Михайленко – Mykhailenko</td></tr>
+            <tr><td>Іі</td><td>Ii</td><td></td><td>Іванків – Ivankiv; Іващенко – Ivashchenko</td></tr>
+            <tr><td>Її</td><td>Yi / i</td><td>на початку / в середині</td><td>Їжакевич – Yizhakevych; Мар'їне – Marine</td></tr>
+            <tr><td>Йй</td><td>Y / i</td><td>на початку / в середині</td><td>Йосипівка – Yosypivka; Олексій – Oleksii</td></tr>
+            <tr><td>Кк</td><td>Kk</td><td></td><td>Київ – Kyiv; Коваленко – Kovalenko</td></tr>
+            <tr><td>Лл</td><td>Ll</td><td></td><td>Лебедин – Lebedyn</td></tr>
+            <tr><td>Мм</td><td>Mm</td><td></td><td>Миколаїв – Mykolaiv</td></tr>
+            <tr><td>Нн</td><td>Nn</td><td></td><td>Ніжин – Nizhyn</td></tr>
+            <tr><td>Оо</td><td>Oo</td><td></td><td>Одеса – Odesa</td></tr>
+            <tr><td>Пп</td><td>Pp</td><td></td><td>Полтава – Poltava</td></tr>
+            <tr><td>Рр</td><td>Rr</td><td></td><td>Рибчинський – Rybchynskyi</td></tr>
+            <tr><td>Сс</td><td>Ss</td><td></td><td>Суми – Sumy</td></tr>
+            <tr><td>Тт</td><td>Tt</td><td></td><td>Тернопіль – Ternopil</td></tr>
+            <tr><td>Уу</td><td>Uu</td><td></td><td>Ужгород – Uzhhorod</td></tr>
+            <tr><td>Фф</td><td>Ff</td><td></td><td>Фастів – Fastiv</td></tr>
+            <tr><td>Хх</td><td>Kh kh</td><td></td><td>Харків – Kharkiv; Христина – Khrystyna</td></tr>
+            <tr><td>Цц</td><td>Ts ts</td><td></td><td>Біла Церква – Bila Tserkva</td></tr>
+            <tr><td>Чч</td><td>Ch ch</td><td></td><td>Чернівці – Chernivtsi</td></tr>
+            <tr><td>Шш</td><td>Sh sh</td><td></td><td>Шостка – Shostka</td></tr>
+            <tr><td>Щщ</td><td>Shch shch</td><td></td><td>Щербухи – Shcherbukhy</td></tr>
+            <tr><td>Юю</td><td>Yu / iu</td><td>на початку / в середині</td><td>Юрій – Yurii; Корюківка – Koriukivka</td></tr>
+            <tr><td>Яя</td><td>Ya / ia</td><td>на початку / в середині</td><td>Яготин – Yahotyn; Знам'янка – Znamianka</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Примітки:</strong></p>
+      <ul>
+        <li>Буквосполучення «зг» відтворюється як <code>zgh</code> (Згорани — Zghorany).</li>
+        <li>М’який знак і апостроф не передаються латиницею.</li>
+        <li>Джерело: <a href="https://czo.gov.ua/translit" target="_blank">ЦЗО: Транслітерація українського алфавіту</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <img src="https://img.icons8.com/material-outlined/24/github.png" alt="GitHub" class="icon-github">
+      <a href="https://github.com/yourusername/translit-ua-en" target="_blank">GitHub репозиторій проєкту</a>
+    </p>
+    <p>© 2025 · MIT License</p>
+  </footer>
+
+  <script src="translit.js"></script>
+</body>
+</html>
